@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace creeperplayer20\RulesUI;
 
 use pocketmine\plugin\PluginBase;
-use jojoe77777\FormAPI\CustomForm;
+use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\Server;
@@ -15,8 +15,14 @@ use pocketmine\command\CommandSender;
 
 class Main extends PluginBase{
 
+public function onEnable() : void{
+
+    $this->saveDefaultConfig();
+    
+}
+
 public function rulesForm($player){
-    $form = new CustomForm(function(Player $player, $data){
+    $form = new SimpleForm(function(Player $player, $data){
         if($data === null){
 
             return true;
@@ -27,7 +33,8 @@ public function rulesForm($player){
             break;
         }});
         $form->setTitle($this->getConfig()->get("title"));
-        $form->addLabel($this->getConfig()->get("content"));
+        $form->setContent($this->getConfig()->get("content"));
+        $form->addButton($this->getConfig()->get("button"));
         $player->sendForm($form);
     }
 
