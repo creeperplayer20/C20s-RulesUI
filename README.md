@@ -6,6 +6,11 @@
 - [X] PM4 Support
 - [X] Fully customizable content
 
+### Commands
+|**Command**|**Description**|
+|-----------|---------------|
+|/rules     |Server rules   |
+
 ### Config
 
 * \n = new line
@@ -15,6 +20,9 @@ title: "§c§lRulesUI"
 
 content: "● Don't Hack \n● Don't Swear \n\nYou can edit this text in the §gconfig.yml"
 
+button: "§cOkay"
+
+
 ### Image
 
-![rulesui](https://user-images.githubusercontent.com/42560781/152545602-e0d245e8-94df-4704-abee-a8bdc388e45f.png)
+![rulesui](https://user-images.githubusercontent.com/42560781/152647411-c7c6ec3f-57d4-476e-9eb9-4e3a544a09a3.png)
